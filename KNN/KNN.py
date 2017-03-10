@@ -50,16 +50,32 @@ def file2matrix(filename):
     for line in fr.readlines():
         line = line.strip()
         listFromLine = line.split('\t')
-        returnMat[index,:] = listFromLine[0:3]
+        returnMat[index,:] = listFromLine[0:3] # 取每一行的前三个
         classLabelVector.append(int(listFromLine[-1]))
+        # classLabelVector.append(listFromLine[-1]) # 取最后一列
         index += 1
     return returnMat,classLabelVector
 
+# 做归一化处理
+def autoNorm(dataSet):
+    # 选取一列的最大值和最小值
+    minVals = dataSet.min(0)
+    maxVals = dataSet.max(0)
+    ranges = maxVals - minVals
+    normDataSet = zeros(shape(dataSet))
+    m = dataSet.shape[0]
+    normDataSet = dataSet - tile(minVals, (m,1))
+    normDataSet = normDataSet/tile(ranges, (m,1))
+    return normDataSet, ranges, minVals
+
 group,lables = createDataSet()
 # print group
+# print group[:2]
 
 c = classify([1,1],group,lables,3)
-print c
+# print c
 
-# returnMat,classLabelVector = file2matrix('datingTestSet2.txt')
-# print classLabelVector
+returnData,classLabelVector = file2matrix('datingTestSet2.txt')
+print autoNorm(returnData)
+# print returnData
+# print returnData[:,2]
