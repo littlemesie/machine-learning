@@ -2,7 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e3c3992-9024-460e-bd03-468084e6d15b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/11.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/12.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/13.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/14.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/15.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/16.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/17.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/18.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/19.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/20.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/21.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/22.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/23.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/24.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/25.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/6.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/7.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/ham/9.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/11.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/12.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/13.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/14.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/15.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/16.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/17.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/18.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/19.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/20.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/21.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/22.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/23.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/24.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/25.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/6.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/7.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NaiveBayes/email/spam/9.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NaiveBayes/bayes.py" afterPath="$PROJECT_DIR$/NaiveBayes/bayes.py" />
     </list>
@@ -31,9 +80,11 @@
       <file leaf-file-name="bayes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NaiveBayes/bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="92">
+              <caret line="143" column="22" lean-forward="true" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+              <folding>
+                <element signature="e#44#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +110,8 @@
         <option value="$PROJECT_DIR$/KNN/createPlot.py" />
         <option value="$PROJECT_DIR$/KNN/KNN.py" />
         <option value="$PROJECT_DIR$/Logistic/logistic.py" />
-        <option value="$PROJECT_DIR$/NaiveBayes/bayes.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/NaiveBayes/bayes.py" />
       </list>
     </option>
   </component>
@@ -135,6 +186,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NaiveBayes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NaiveBayes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -147,6 +238,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NaiveBayes" />
       <recent name="$PROJECT_DIR$/Logistic" />
       <recent name="$PROJECT_DIR$/KNN" />
     </key>
@@ -417,12 +509,12 @@
     <frame x="85" y="23" width="1247" height="779" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24979591" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -457,7 +549,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -465,7 +559,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -778,11 +874,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NaiveBayes/email/ham/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NaiveBayes/email/spam/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NaiveBayes/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="92">
+          <caret line="143" column="22" lean-forward="true" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
