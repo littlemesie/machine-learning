@@ -12,34 +12,35 @@ import matplotlib.pyplot as plt
 
 # 打开数据
 def loadDataSet():
-    data = []; lables= []
-    file = open('testSet.txt')
-    for line in file.xreadlines():
+    dataMat = []; labelMat = []
+    fr = open('testSet.txt')
+    for line in fr.readlines():
         lineArr = line.strip().split()
-        data.append([1.0,float(lineArr[0]),float(lineArr[1])])
-        lables.append(int(lineArr[2]))
-    return data,lables
+        dataMat.append([1.0, float(lineArr[0]), float(lineArr[1])])
+        labelMat.append(int(lineArr[2]))
+    return dataMat,labelMat
 
-# sigmoid 函数
+# sigmoid 函数 inX 是一个向量
 def sigmoid(inX):
     return 1.0/(1+exp(-inX))
 
-# 梯度上升法
+# 梯度上升法 dataMatIn是一个二维数组 每列代表不同的特征 每行代表不同的样本
+# classLabels 是类别标签
 def gradAscent(dataMatIn, classLabels):
-    dataMatrix = mat(dataMatIn)             #convert to NumPy matrix
-    labelMat = mat(classLabels).transpose() #convert to NumPy matrix
+    dataMatrix = mat(dataMatIn)
+    labelMat = mat(classLabels).transpose()
     m,n = shape(dataMatrix)
-    alpha = 0.001
+    alpha = 0.001  # 步伐
     maxCycles = 500 # 迭代次数
     weights = ones((n,1))
-    for k in range(maxCycles):              #heavy on matrix operations
+    for k in range(maxCycles):
         # 矩阵相乘
-        h = sigmoid(dataMatrix*weights)     #matrix mult
-        error = (labelMat - h)              #vector subtraction
+        h = sigmoid(dataMatrix*weights)
+        error = (labelMat - h)              # 错误率
         weights = weights + alpha * dataMatrix.transpose()* error # 梯度上升法计算
     return weights
 
-# 画图
+# 最佳拟合直线图
 def plotBestFit(w):
     weights = w.getA()
     # print w
@@ -64,11 +65,24 @@ def plotBestFit(w):
     plt.xlabel('X1'); plt.ylabel('X2');
     plt.show()
 
+#  随机梯度上升法
+def stocGradAscent0(dataMatrix, classLabels):
+    m,n = shape(dataMatrix)
+    alpha = 0.01
+    weights = ones(n)   #initialize to all ones
+    for i in range(m):
+        h = sigmoid(sum(dataMatrix[i]*weights))
+        error = classLabels[i] - h
+        weights = weights + alpha * error * dataMatrix[i]
+    return weights
 
-data,lables = loadDataSet()
+
+
+dataMat,labelMat = loadDataSet()
 # print data
 
-w = gradAscent(data,lables)
-
-plotBestFit(w)
-#print w
+w = gradAscent(dataMat,labelMat)
+w1 = stocGradAscent0(array(dataMat),labelMat)
+# plotBestFit(w1)
+print w1
+print w1
