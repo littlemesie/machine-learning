@@ -1,7 +1,4 @@
 # -*- coding:utf-8 -*-
-'''
- 图像分割
-'''
 import numpy as np
 import PIL.Image as image
 from sklearn.cluster import KMeans
