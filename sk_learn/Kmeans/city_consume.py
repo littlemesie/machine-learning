@@ -27,5 +27,8 @@ CityCluster = [[],[],[],[]]
 for i in range(len(cityName)):
     CityCluster[label[i]].append(cityName[i])
 for i in range(len(CityCluster)):
-    # print("Expenses:%.2f" % expenses[i])
-    print(CityCluster[i])
+    print("Expenses:%.2f" % expenses[i])
+    city_name = CityCluster[i]
+    for j in range(len(city_name)):
+        print city_name[j]
+    # print city_name[0]
