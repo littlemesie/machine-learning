@@ -22,6 +22,7 @@ def loadData(filePath):
 data, cityName = loadData('city.txt')
 km = KMeans(n_clusters=3)
 label = km.fit_predict(data)
+print label
 expenses = np.sum(km.cluster_centers_,axis=1)
 CityCluster = [[],[],[],[]]
 for i in range(len(cityName)):
