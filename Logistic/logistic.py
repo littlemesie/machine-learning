@@ -12,7 +12,8 @@ import matplotlib.pyplot as plt
 
 # 打开数据
 def loadDataSet():
-    dataMat = []; labelMat = []
+    dataMat = []
+    labelMat = []
     fr = open('testSet.txt')
     for line in fr.readlines():
         lineArr = line.strip().split()
@@ -28,10 +29,11 @@ def sigmoid(inX):
 # classLabels 是类别标签
 def gradAscent(dataMatIn, classLabels):
     dataMatrix = mat(dataMatIn)
+    # transposeh函数numpy矩阵转置操作
     labelMat = mat(classLabels).transpose()
     m,n = shape(dataMatrix)
     alpha = 0.001  # 步伐
-    maxCycles = 500 # 迭代次数
+    maxCycles = 1000 # 迭代次数
     weights = ones((n,1))
     for k in range(maxCycles):
         # 矩阵相乘
@@ -47,13 +49,17 @@ def plotBestFit(w):
     dataMat,labelMat=loadDataSet()
     dataArr = array(dataMat)
     n = shape(dataArr)[0]
-    xcord1 = []; ycord1 = []
-    xcord2 = []; ycord2 = []
+    xcord1 = []
+    ycord1 = []
+    xcord2 = []
+    ycord2 = []
     for i in range(n):
         if int(labelMat[i])== 1:
-            xcord1.append(dataArr[i,1]); ycord1.append(dataArr[i,2])
+            xcord1.append(dataArr[i,1])
+            ycord1.append(dataArr[i,2])
         else:
-            xcord2.append(dataArr[i,1]); ycord2.append(dataArr[i,2])
+            xcord2.append(dataArr[i,1])
+            ycord2.append(dataArr[i,2])
     fig = plt.figure()
     ax = fig.add_subplot(111)
     ax.scatter(xcord1, ycord1, s=30, c='red', marker='s')
@@ -62,7 +68,8 @@ def plotBestFit(w):
     # 拟合一条最佳直线
     y = (-weights[0]-weights[1]*x)/weights[2]
     ax.plot(x, y)
-    plt.xlabel('X1'); plt.ylabel('X2');
+    plt.xlabel('X1')
+    plt.ylabel('X2')
     plt.show()
 
 #  随机梯度上升法
@@ -134,12 +141,15 @@ def multiTest():
 
 
 dataMat,labelMat = loadDataSet()
-# print data
+dataArr = array(dataMat)
+
+print dataArr
+print dataArr[0]
 
 w = gradAscent(dataMat,labelMat)
 w1 = stocGradAscent0(array(dataMat),labelMat)
-# plotBestFit(w1)
-# print w1
+# plotBestFit(w)
+# print  'y = ' + '(-' + str(w[0]) + '-' + str(w[1]) + '*x)/' + str(w[2])
 # print w1
 
-multiTest()
+# multiTest()
