@@ -1,9 +1,5 @@
 # coding=utf8
-import math
-import random
-import string
-import numpy
-import sys
+import math,random,numpy,sys,string
 
 random.seed(0)
 

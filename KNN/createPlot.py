@@ -2,11 +2,11 @@
 
 from numpy import *
 import KNN
-import matplotlib
 import matplotlib.pyplot as plt
+from Utils import Config
 fig = plt.figure()
 ax = fig.add_subplot(111)
-datingDataMat,datingLabels = KNN.file2matrix('datingTestSet2.txt')
+datingDataMat,datingLabels = KNN.file2matrix(Config.DATAS + 'KNN/datingTestSet2.txt')
 #ax.scatter(datingDataMat[:,1], datingDataMat[:,2])
 # 取第2列和第三列的数据
 ax.scatter(datingDataMat[:,1], datingDataMat[:,2], 15.0*array(datingLabels), 15.0*array(datingLabels))

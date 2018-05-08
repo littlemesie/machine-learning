@@ -5,7 +5,7 @@
 
 from numpy import *
 import operator
-from os import listdir
+from Utils import Config
 
 def createDataSet():
     group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
@@ -75,7 +75,7 @@ group,lables = createDataSet()
 c = classify([1,1],group,lables,3)
 # print c
 
-returnData,classLabelVector = file2matrix('datingTestSet2.txt')
+returnData,classLabelVector = file2matrix(Config.DATAS + 'KNN/datingTestSet2.txt')
 print autoNorm(returnData)
 # print returnData
 # print returnData[:,2]
