@@ -5,7 +5,6 @@
 from sklearn.neighbors.nearest_centroid import NearestCentroid
 import numpy as np
 from Utils import Config
-import KNN
 from os import listdir
 
 class TestDigits(object):
