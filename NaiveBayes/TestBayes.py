@@ -61,4 +61,3 @@ class Test(object):
 if __name__ == '__main__':
     # Test().testingNB()
     Test().spamTest()
-    
