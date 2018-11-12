@@ -2,7 +2,6 @@
 '''
     K均值聚类算法
 '''
-
 from numpy import *
 
 def loadDataSet(fileName):
@@ -16,7 +15,7 @@ def loadDataSet(fileName):
 
 # 计算欧氏距离
 def distEclud(vecA, vecB):
-    return sqrt(sum(power(vecA - vecB, 2)))
+    return np.sqrt(sum(np.power(vecA - vecB, 2)))
 
 # 构建一个随机包含k个质心的集合
 def randCent(dataSet, k):
@@ -72,7 +71,7 @@ def biKmeans(dataSet, k, distMeas=distEclud):
             centroidMat, splitClustAss = kMeans(ptsInCurrCluster, 2, distMeas)
             sseSplit = sum(splitClustAss[:,1])#compare the SSE to the currrent minimum
             sseNotSplit = sum(clusterAssment[nonzero(clusterAssment[:,0].A!=i)[0],1])
-            print "sseSplit, and notSplit: ",sseSplit,sseNotSplit
+            print("sseSplit, and notSplit: ",sseSplit,sseNotSplit)
             if (sseSplit + sseNotSplit) < lowestSSE:
                 bestCentToSplit = i
                 bestNewCents = centroidMat
@@ -80,8 +79,8 @@ def biKmeans(dataSet, k, distMeas=distEclud):
                 lowestSSE = sseSplit + sseNotSplit
         bestClustAss[nonzero(bestClustAss[:,0].A == 1)[0],0] = len(centList) #change 1 to 3,4, or whatever
         bestClustAss[nonzero(bestClustAss[:,0].A == 0)[0],0] = bestCentToSplit
-        print 'the bestCentToSplit is: ',bestCentToSplit
-        print 'the len of bestClustAss is: ', len(bestClustAss)
+        print('the bestCentToSplit is: ',bestCentToSplit)
+        print('the len of bestClustAss is: ', len(bestClustAss))
         centList[bestCentToSplit] = bestNewCents[0,:].tolist()[0]#replace a centroid with two best centroids
         centList.append(bestNewCents[1,:].tolist()[0])
         clusterAssment[nonzero(clusterAssment[:,0].A == bestCentToSplit)[0],:]= bestClustAss#reassign new clusters, and SSE
@@ -94,4 +93,4 @@ rand = randCent(dataMat,4)
 # d = distEclud(dataMat[0],dataMat[1])
 #
 p,q = kMeans(dataMat,4)
-print p
+print(p)
