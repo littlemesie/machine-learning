@@ -4,12 +4,11 @@
     logistic算法
 '''
 
-import sys
 from numpy import *
 import matplotlib.pyplot as plt
 
-# sys.setrecursionlimit(10000)
-
+class Logistic():
+    pass
 # 打开数据
 def loadDataSet():
     dataMat = []
@@ -129,7 +128,7 @@ def colicTest():
         if int(classifyVector(array(lineArr), trainWeights))!= int(currLine[21]):
             errorCount += 1
     errorRate = (float(errorCount)/numTestVec)
-    print "the error rate of this test is: %f" % errorRate
+    print("the error rate of this test is: %f" % errorRate)
     return errorRate
 
 def multiTest():
@@ -137,14 +136,12 @@ def multiTest():
     errorSum=0.0
     for k in range(numTests):
         errorSum += colicTest()
-    print "after %d iterations the average error rate is: %f" % (numTests, errorSum/float(numTests))
+    print("after %d iterations the average error rate is: %f" % (numTests, errorSum/float(numTests)))
 
 
 dataMat,labelMat = loadDataSet()
 dataArr = array(dataMat)
 
-print dataArr
-print dataArr[0]
 
 w = gradAscent(dataMat,labelMat)
 w1 = stocGradAscent0(array(dataMat),labelMat)

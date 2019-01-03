@@ -16,4 +16,4 @@ def loadDataSet():
     return dataMat,labelMat
 
 dataMat,labelMat = loadDataSet()
-print labelMat
+print(labelMat)
