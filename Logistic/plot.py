@@ -21,7 +21,7 @@ def plot_best_fit():
     data, lables = load_data_set()
     data = array(data)
     w = lr.grad_ascent(data, lables)
-    weights = w.getA()
+    print(w)
     n = shape(data)[0]
     xcord1 = []
     ycord1 = []
@@ -40,7 +40,7 @@ def plot_best_fit():
     ax.scatter(xcord2, ycord2, s=30, c='green')
     x = arange(-3.0, 3.0, 0.1)
     # 拟合一条最佳直线
-    y = (-weights[0]-weights[1]*x)/weights[2]
+    y = (-w[0]-w[1]*x)/w[2]
     ax.plot(x, y)
     plt.xlabel('X1')
     plt.ylabel('X2')
