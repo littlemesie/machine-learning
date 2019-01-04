@@ -15,24 +15,23 @@ class Logistic(object):
         """
         return 1.0 / (1 + exp(-X))
 
-    def grad_ascent(self, X, y, iter=500):
+    def grad_ascent(self, X, y, iter=1000):
         """
         梯度上升法
         :param X: 输入数据
         :param y: 输入分类（类别标签）
         :return:
+        transposeh函数numpy矩阵转置操作
         """
-        data = mat(X)
-        # transposeh函数numpy矩阵转置操作
-        labels = mat(y).transpose()
-        m, n = shape(data)
+        m, n = shape(X)
         alpha = 0.001  # 步伐
-        weights = ones((n, 1))
+        weights = ones(n)
         for k in range(iter):
-            # 矩阵相乘
-            h = self.sigmoid(data * weights)
-            error = (labels - h)  # 错误率
-            weights = weights + alpha * data.transpose() * error  # 梯度上升法计算
+            for i in range(m):
+                # 矩阵相乘
+                h = self.sigmoid(sum(X[i] * weights))
+                error = y[i] - h
+                weights = weights + alpha * X[i] * error  # 梯度上升法计算
         return weights
 
     def random_grad_ascent(self, X, y, iter=150):
