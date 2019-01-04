@@ -97,10 +97,11 @@ class Bayes(object):
         """
         p1 = sum(vec2Classify * p1Vec) + log(pClass1)
         p0 = sum(vec2Classify * p0Vec) + log(1.0 - pClass1)
+
         if p1 > p0:
             return 1
         else:
-            return 0
+            return -1
 
     def bagOfWords2VecMN(self,vocabList, inputSet):
         """
