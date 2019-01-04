@@ -7,8 +7,63 @@
 from numpy import *
 import matplotlib.pyplot as plt
 
-class Logistic():
-    pass
+class Logistic(object):
+
+    def sigmoid(self,X):
+        """
+        sigmoid 函数，X 是一个向量
+        :return:
+        """
+        return 1.0 / (1 + exp(-X))
+
+    def grad_ascent(self, X, y):
+        """
+        梯度上升法
+        :param X: 输入数据
+        :param y: 输入分类（类别标签）
+        :return:
+        """
+        data = mat(X)
+        # transposeh函数numpy矩阵转置操作
+        labels = mat(y).transpose()
+        m, n = shape(data)
+        alpha = 0.001  # 步伐
+        max_cycles = 1000  # 迭代次数
+        weights = ones((n, 1))
+        for k in range(max_cycles):
+            # 矩阵相乘
+            h = self.sigmoid(data * weights)
+            error = (labels - h)  # 错误率
+            weights = weights + alpha * data.transpose() * error  # 梯度上升法计算
+        return weights
+
+    def random_grad_ascent(self, X, y, num=150):
+        """
+        随机梯度上升
+        :param X: 输入数据
+        :param y: 输入分类（类别标签）
+        :return:
+        """
+        m, n = shape(X)
+        weights = ones(n)
+        for j in range(num):
+            data_index = range(m)
+            for i in range(m):
+                alpha = 4 / (1.0 + j + i) + 0.0001
+                rand_index = int(random.uniform(0, len(data_index)))
+                h = sigmoid(sum(X[rand_index] * weights))
+                error = y[rand_index] - h
+                weights = weights + alpha * error * X[rand_index]
+                del (X[rand_index])
+        return weights
+
+    def fit_predict(self, X, y=None):
+        prob = sigmoid(sum(X * weights))
+        if prob > 0.5:
+            return 1.0
+        else:
+            return 0.0
+
 # 打开数据
 def loadDataSet():
     dataMat = []
