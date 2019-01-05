@@ -21,14 +21,13 @@ class Logistic(object):
         train_y = train[21]
         lr = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
         lr.fit(train_x, train_y)
-
         score = lr.score(train_x, train_y)
         print('train acc : {}'.format(score))
 
         test = pd.read_table('data/horseColicTest.txt', header=None, sep='\t')
         test_x = test.drop(columns=21)
         test_y = test[21]
-
+        y = lr.predict(test_x)
         score = lr.score(test_x, test_y)
         print('test acc : {}'.format(score))
 
