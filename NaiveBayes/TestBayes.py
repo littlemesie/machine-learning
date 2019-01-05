@@ -20,6 +20,39 @@ class Test(object):
         thisDoc = array(self.bayes.setOfWords2Vec(myVocabList, testEntry))
         print testEntry, 'classified as: ', self.bayes.classifyNB(thisDoc, p0V, p1V, pAb)
 
+    # 测试书上例子
+    def testingNB01(self):
+        list_X = [
+            [1, 'S'],
+            [1, 'M'],
+            [1, 'M'],
+            [1, 'S'],
+            [1, 'S'],
+            [2, 'S'],
+            [2, 'M'],
+            [2, 'M'],
+            [2, 'L'],
+            [2, 'L'],
+            [3, 'L'],
+            [3, 'M'],
+            [3, 'M'],
+            [3, 'L'],
+            [3, 'L']
+        ]
+        list_Y = [-1,-1,1,1,-1,-1,-1,1,1,1,1,1,1,1,-1]
+        # listOPosts, listClasses = self.bayes.loadDataSet()
+        mylist = self.bayes.createVocabList(list_X)
+        trainMat = []
+        for x in list_X:
+            trainMat.append(self.bayes.setOfWords2Vec(mylist, x))
+        p0V, p1V, pAb = self.bayes.trainNB0(array(trainMat), array(list_Y))
+        test_X = [2, 'S']
+        # res = array(self.bayes.setOfWords2Vec(mylist, test_X))
+
+        res = array(self.bayes.setOfWords2Vec(mylist, test_X))
+        print test_X, 'classified as: ', self.bayes.classifyNB(res, p0V, p1V, pAb)
+
+
     # 测试函数
     def spamTest(self):
         docList = [];
@@ -58,6 +91,7 @@ class Test(object):
         return e
         print 'the error rate is: ', e
 
+
 if __name__ == '__main__':
     # Test().testingNB()
-    Test().spamTest()
+    Test().testingNB01()
