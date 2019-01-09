@@ -45,7 +45,7 @@ class Bayes(object):
             if word in vocabList:
                 returnVec[vocabList.index(word)] = 1
             else:
-                print "the word: %s is not in my Vocabulary!" % word
+                print("the word: %s is not in my Vocabulary!" % word)
         return returnVec
 
     def train_matrix(self,postingList,vocabSet):

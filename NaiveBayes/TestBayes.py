@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 from numpy import *
-import Bayes
+from NaiveBayes import bayes
 from Utils import Config
 
 class Test(object):
 
-    bayes = Bayes.Bayes()
+    bayes = bayes.Bayes()
 
     def testingNB(self):
         listOPosts, listClasses = self.bayes.loadDataSet()
@@ -18,7 +18,7 @@ class Test(object):
         thisDoc = array(self.bayes.setOfWords2Vec(myVocabList, testEntry))
         testEntry = ['stupid', 'garbage']
         thisDoc = array(self.bayes.setOfWords2Vec(myVocabList, testEntry))
-        print testEntry, 'classified as: ', self.bayes.classifyNB(thisDoc, p0V, p1V, pAb)
+        print(testEntry, 'classified as: ', self.bayes.classifyNB(thisDoc, p0V, p1V, pAb))
 
     # 测试书上例子
     def testingNB01(self):
@@ -50,13 +50,13 @@ class Test(object):
         # res = array(self.bayes.setOfWords2Vec(mylist, test_X))
 
         res = array(self.bayes.setOfWords2Vec(mylist, test_X))
-        print test_X, 'classified as: ', self.bayes.classifyNB(res, p0V, p1V, pAb)
+        print(test_X, 'classified as: ', self.bayes.classifyNB(res, p0V, p1V, pAb))
 
 
     # 测试函数
     def spamTest(self):
-        docList = [];
-        classList = [];
+        docList = []
+        classList = []
         fullText = []
         for i in range(1, 26):
             # 导入文件 并解析成词列表
@@ -75,7 +75,7 @@ class Test(object):
             randIndex = int(random.uniform(0, len(trainingSet)))
             testSet.append(trainingSet[randIndex])
             del (trainingSet[randIndex])
-        trainMat = [];
+        trainMat = []
         trainClasses = []
         for docIndex in trainingSet:  # 测试分类器
             trainMat.append(self.bayes.bagOfWords2VecMN(vocabList, docList[docIndex]))
@@ -86,10 +86,10 @@ class Test(object):
             wordVector = self.bayes.bagOfWords2VecMN(vocabList, docList[docIndex])
             if self.bayes.classifyNB(array(wordVector), p0V, p1V, pSpam) != classList[docIndex]:
                 errorCount += 1
-                print "classification error", docList[docIndex]
+                print("classification error", docList[docIndex])
         e = float(errorCount) / len(testSet)
         return e
-        print 'the error rate is: ', e
+        print('the error rate is: ', e)
 
 
 if __name__ == '__main__':
