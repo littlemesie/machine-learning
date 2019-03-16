@@ -13,11 +13,12 @@
 Flying_sfeng博客地址：http://blog.csdn.net/flying_sfeng/article/details/64133822
 在此表示感谢你的代码和注解， 我重新也完善了个人注解
 '''
+import os
 from random import seed, randrange, random
 
 
 # 导入csv文件
-def loadDataSet(filename):
+def load_data_set(filename):
     dataset = []
     with open(filename, 'r') as fr:
         for line in fr.readlines():
@@ -301,10 +302,10 @@ def evaluate_algorithm(dataset, algorithm, n_folds, *args):
 
 
 if __name__ == '__main__':
-
+    data_path = os.path.dirname(os.path.abspath(__file__)) + "/../../data/"
     # 加载数据
-    dataset = loadDataSet('data/7.RandomForest/sonar-all-data.txt')
-    # print(dataset)
+    dataset = load_data_set(data_path + 'RandomForest/sonar-all-data.txt')
+    print(dataset[0])
 
     n_folds = 5        # 分成5份数据，进行交叉验证
     max_depth = 20     # 调参（自己修改） #决策树深度不能太深，不然容易导致过拟合
