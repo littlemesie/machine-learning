@@ -37,5 +37,5 @@ def adaboost(X, y):
 if __name__ == '__main__':
     data_path = os.path.dirname(os.path.abspath(__file__)) + "/../../data/"
     # 加载数据
-    dataset, lableset = load_data_set(data_path + 'AdaBoost/horseColicTraining2.txt')
+    dataset, lableset = load_data_set(data_path + 'AdaBoost/horseColicTraining.txt')
     adaboost(dataset, lableset)

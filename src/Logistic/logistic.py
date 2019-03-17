@@ -64,7 +64,8 @@ if __name__ == '__main__':
     lr = Logistic()
     train_data = []
     train_label = []
-    with open('data/horseColicTraining.txt',encoding='utf-8') as f:
+    data_path = os.path.dirname(os.path.abspath(__file__)) + "/../../data/"
+    with open(data_path + 'AdaBoost/horseColicTraining.txt', encoding='utf-8') as f:
         for line in f.readlines():
             curr_line = line.strip().split('\t')
             line_arr = []
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     train_label = []
     error_count = 0
     num_test = 0
-    with open('data/horseColicTest.txt', encoding='utf-8') as f:
+    with open( data_path + 'AdaBoost/horseColicTest.txt', encoding='utf-8') as f:
         for i, line in enumerate(f.readlines()):
             num_test = i+1
             curr_line = line.strip().split('\t')
