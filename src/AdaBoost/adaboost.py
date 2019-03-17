@@ -248,12 +248,12 @@ def plot_roc(pred_strengths, class_labels):
 
 def test():
     data_path = os.path.dirname(os.path.abspath(__file__)) + "/../../data/"
-    data_mat, class_labels = load_data_set(data_path + 'AdaBoost/horseColicTraining2.txt')
+    data_mat, class_labels = load_data_set(data_path + 'AdaBoost/horseColicTraining.txt')
     print(data_mat.shape, len(class_labels))
     weak_class_arr, agg_class_est = ada_boost_train_ds(data_mat, class_labels, 40)
     print(weak_class_arr, '\n-----\n', agg_class_est.T)
     plot_roc(agg_class_est, class_labels)
-    data_arr_test, label_arr_test = load_data_set(data_path + "AdaBoost/horseColicTest2.txt")
+    data_arr_test, label_arr_test = load_data_set(data_path + "AdaBoost/horseColicTest.txt")
     m = np.shape(data_arr_test)[0]
     predicting10 = ada_classify(data_arr_test, weak_class_arr)
     err_arr = np.mat(np.ones((m, 1)))

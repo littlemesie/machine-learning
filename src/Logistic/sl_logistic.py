@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+import os
 import pandas as pd
 import numpy as np
 from sklearn.datasets import load_iris
@@ -16,7 +17,8 @@ class Logistic(object):
 
     def horse_colic(self):
         """"""
-        train = pd.read_table('data/horseColicTraining.txt', header=None, sep='\t')
+        data_path = os.path.dirname(os.path.abspath(__file__)) + "/../../data/"
+        train = pd.read_table(data_path + 'AdaBoost/horseColicTraining.txt', header=None, sep='\t')
         train_x = train.drop(columns=21)
         train_y = train[21]
         lr = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
@@ -24,7 +26,7 @@ class Logistic(object):
         score = lr.score(train_x, train_y)
         print('train acc : {}'.format(score))
 
-        test = pd.read_table('data/horseColicTest.txt', header=None, sep='\t')
+        test = pd.read_table(data_path + 'AdaBoost/horseColicTest.txt', header=None, sep='\t')
         test_x = test.drop(columns=21)
         test_y = test[21]
         y = lr.predict(test_x)
