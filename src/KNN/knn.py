@@ -5,11 +5,10 @@
 from numpy import *
 import operator
 import matplotlib.pyplot as plt
-from Utils import Config
 
 class KNN(object):
 
-    def createDataSet(self):
+    def create_data_set(self):
         """
         @summary:创建数据集和标签,用于测试
         :return:
@@ -43,7 +42,7 @@ class KNN(object):
             voteIlabel = labels[sortedDistIndicies[i]]
             classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
         # 倒序排序 返回时频率发生最高的标签
-        sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
+        sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
         return sortedClassCount[0][0]
 
     def file2matrix(self,filename):
@@ -92,7 +91,7 @@ class KNN(object):
         """
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        datingDataMat, datingLabels = self.file2matrix(Config.DATAS + 'KNN/datingTestSet2.txt')
+        datingDataMat, datingLabels = self.file2matrix('../../data/KNN/datingTestSet2.txt')
         # ax.scatter(datingDataMat[:,1], datingDataMat[:,2])
         # 取第2列和第三列的数据
         ax.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 15.0 * array(datingLabels), 15.0 * array(datingLabels))
@@ -103,9 +102,9 @@ class KNN(object):
 
 if __name__ == '__main__':
     knn = KNN()
-    group,lables = knn.createDataSet()
+    group,lables = knn.create_data_set()
     c = knn.classify([1,1],group,lables,3)
-    print c
-    knn.createPlot()
-    returnData,classLabelVector = knn.file2matrix(Config.DATAS + 'KNN/datingTestSet2.txt')
+    print(c)
+    # knn.createPlot()
+    # returnData,classLabelVector = knn.file2matrix('../../KNN/datingTestSet2.txt')
     # print knn.autoNorm(returnData)
