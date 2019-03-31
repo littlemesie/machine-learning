@@ -60,11 +60,11 @@ class Test(object):
         fullText = []
         for i in range(1, 26):
             # 导入文件 并解析成词列表
-            wordList = self.bayes.textParse(open(Config.DATAS + 'NB/email/spam/%d.txt' % i).read())
+            wordList = self.bayes.textParse(open(Config.DATAS + 'NaiveBayes/email/spam/%d.txt' % i).read())
             docList.append(wordList)
             fullText.extend(wordList)
             classList.append(1)
-            wordList = self.bayes.textParse(open(Config.DATAS + 'NB/email/ham/%d.txt' % i).read())
+            wordList = self.bayes.textParse(open(Config.DATAS + 'NaiveBayes/email/ham/%d.txt' % i).read())
             docList.append(wordList)
             fullText.extend(wordList)
             classList.append(0)
