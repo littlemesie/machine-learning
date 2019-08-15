@@ -1,5 +1,5 @@
-from numpy import linalg as la
-from numpy import *
+import numpy as np
+
 def demo():
     data = [[0, -1.6, 0.6],
            [0, 1.2, 0.8],
@@ -17,7 +17,7 @@ def demo():
            [0, 0, 0, 2, 0, 2, 5, 0, 0, 1, 2],
            [0, 0, 0, 0, 5, 0, 0, 0, 0, 4, 0],
            [1, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0]]
-    U, Sigma, VT = linalg.svd(data1)
+    U, Sigma, VT = np.linalg.svd(data1)
     # print('U:', U)
     # print('Sigma', Sigma)
     # print('VT:', VT)
